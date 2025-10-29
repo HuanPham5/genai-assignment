@@ -6,6 +6,7 @@ Configure the default terminal in vscode to launch conda terminal everytime.
 
 CTRL+SHIFT+P in open search bar setting vscode, search "Preferences: Open User Settings (JSON)" and paste the following into the json file:
 
+<pre>```
 "terminal.integrated.profiles.windows": {
   "Anaconda PowerShell": {
     "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -17,28 +18,37 @@ CTRL+SHIFT+P in open search bar setting vscode, search "Preferences: Open User S
     "icon": "anaconda"
   }
 },
-"terminal.integrated.defaultProfile.windows": "Anaconda PowerShell"
-
+"terminal.integrated.defaultProfile.windows": "Anaconda PowerShell" ```
+</pre>
 Save the json file and everytime you start terminal, it should launch conda terminal by default
 
 Launch terminal inside vscode
 
 Create virtual env by:
 
+<pre>```
 conda create -n genai python=3.12
 
-conda activate genai
+conda activate genai ```
+</pre>
+Then type 
 
-Then type "pip install -r requirements.txt" to install all the required packages
+<pre>
+pip install -r requirements.txt
+```</pre> 
+
+to install all the required packages
 
 # How to create ~/.soonerai.env and required keys
 Click on the "New File..." icon on the left side panel in vscode, then type in ".soonerai.env"
 
 Then open the .soonerai.env and paste:
 
+<pre>```
 SOONERAI_API_KEY=your_key_here
 SOONERAI_BASE_URL=https://ai.sooners.us
 SOONERAI_MODEL=gemma3:4b
+```</pre>
 
 Get the API key by sign up and register with OU email at https://ai.sooners.us
 
